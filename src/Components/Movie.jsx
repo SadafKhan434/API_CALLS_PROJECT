@@ -1,0 +1,10 @@
+import React from "react";
+const Movie=(props)=>{
+    return(
+    <li className={classes.movie}>
+    <h2>{props.title}</h2>
+    <h3>{props.releaseDate}</h3>
+</li>
+    )
+}
+export default Movie;
