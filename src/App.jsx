@@ -1,5 +1,6 @@
 import React ,{ useState ,useEffect,useCallback} from 'react'
 import MovieList from './Components/MovieList';
+import MovieForm from './Components/MovieForm';
  import './App.css';
 function App(){
   const[movies,setMovies]=useState([]);
@@ -47,11 +48,21 @@ if(movies.length>0){
 }
  
     
-  
+  const addMovieHandler = useCallback((newMovie) => {
+  const movieWithId = {
+    ...newMovie,
+    id: Date.now().toString(), 
+  };
+
+  setMovies((prevMovies) => [movieWithId, ...prevMovies]); 
+}, []);
+
 
 return(
   <React.Fragment>
     <section>
+            <MovieForm onAddMovie={addMovieHandler} /> 
+
       <button onClick={fetchMovieHandler}>Fetch Movies</button>
     </section>
     <section>

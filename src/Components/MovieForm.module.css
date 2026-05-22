@@ -1,0 +1,61 @@
+.form-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  max-width: 40rem;
+  margin: 2rem auto;
+}
+
+.control {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.control label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.control input,
+.control textarea {
+  width: 100%;
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.control input:focus,
+.control textarea:focus {
+  outline: none;
+  border-color: #230046;
+  background-color: #f7f5f8;
+}
+
+.actions {
+  text-align: center;
+}
+
+.actions button {
+  font: inherit;
+  cursor: pointer;
+  background-color: #230046; 
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.actions button:hover {
+  background-color: #3a0270;
+}
+
+.actions button:active {
+  transform: scale(0.98);
+}
